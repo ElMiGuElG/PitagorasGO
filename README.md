@@ -1,1 +1,1 @@
-# Pit-gorasGO
+# PitagorasGO
