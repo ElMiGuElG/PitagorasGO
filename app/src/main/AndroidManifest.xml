@@ -13,6 +13,15 @@
         android:theme="@style/Theme.PitagorasGO"
         tools:targetApi="31">
         <activity
+            android:name=".PerimeterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FunctionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainMenuActivity"
             android:exported="false" />
         <activity

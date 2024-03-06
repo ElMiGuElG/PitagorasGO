@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PitagorasGO</string>
+    <string name="functions"> funciones trigonométricas</string>
+    <string name="area">Área</string>
+    <string name="perimeter">Perímetro</string>
+    <string name="text">¿Experimentas dificultades con las funciones trigonométricas, áreas o perímetros?</string>
 </resources>
