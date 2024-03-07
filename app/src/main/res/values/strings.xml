@@ -4,6 +4,7 @@
     <string name="perimeter">Perímetro</string>
     <string name="result">Resultado</string>}
     <string name="perimeterTextResult">El Perimetro del circulo es: </string>
+    <string name="areaTextResult">El Area del circulo es: </string>
     <string name="functions"> Funciones Trigonométricas</string>
     <string name="text">¿Experimentas dificultades con las funciones trigonométricas, áreas o perímetros?</string>
     <string name="areaText">El área es la medida de la extensión de una superficie, expresada en unidades cuadradas.</string>
@@ -11,5 +12,7 @@
     <string name="functionText">Las funciones trigonométricas describen las relaciones entre los ángulos y los lados de un triángulo, como el seno, coseno y tangente.</string>
     <string name="functionInstruction">Ingresa un valor de ángulo en la siguiente celda para calcular sus funciones trigonométricas. Puedes elegir entre ingresar el valor del ángulo en grados o radianes.</string>
     <string name="motivationText">¡Explora, aprende y domina las matemáticas con nuestra aplicación!</string>
-    <string name="perimeterInstruction">Introduce el valor del radio en metros la siguiente celda para calcular el perímetro de la figura.</string>
+    <string name="perimeterInstruction">Introduce el valor del radio en metros en la siguiente celda para calcular el perímetro de la figura.</string>
+    <string name="AreaInstruction">Introduce el valor del radio en metros en la siguiente celda para calcular el Area de la figura.</string>
+
 </resources>
