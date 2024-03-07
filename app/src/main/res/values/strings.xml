@@ -5,6 +5,9 @@
     <string name="result">Resultado</string>}
     <string name="perimeterTextResult">El Perimetro del circulo es: </string>
     <string name="areaTextResult">El Area del circulo es: </string>
+    <string name="sinTextResult">El Seno es: </string>
+    <string name="cosTextResult">El Coseno es: </string>
+    <string name="tanTextResult">La Tangente es: </string>
     <string name="functions"> Funciones Trigonométricas</string>
     <string name="text">¿Experimentas dificultades con las funciones trigonométricas, áreas o perímetros?</string>
     <string name="areaText">El área es la medida de la extensión de una superficie, expresada en unidades cuadradas.</string>

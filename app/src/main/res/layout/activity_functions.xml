@@ -18,7 +18,7 @@
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:background="@color/background"
             app:layout_constraintCircleRadius="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,6 @@
             app:layout_constraintStart_toStartOf="@+id/viewFunction" />
 
         <!-- Views of the Trigonoimetric Functions -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/viewFunction"
             android:layout_width="match_parent"
@@ -61,7 +60,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="800dp"
                 android:padding="15dp">
 
                 <TextView
@@ -69,7 +68,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
@@ -77,7 +75,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="@string/functionText"
                     android:textColor="@color/black"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <ImageView
                     android:id="@+id/img_cont"
@@ -98,7 +96,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="@string/functionInstruction"
                     android:textColor="@color/black"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
 
                 <LinearLayout
                     android:id="@+id/layoutFunctions"
@@ -110,49 +108,148 @@
                     android:layout_marginEnd="16dp"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="14dp"
+                        android:text="Ángulo: "
+                        android:textColor="@color/black" />
+
                     <EditText
                         android:id="@+id/editNumber"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvFunctionInstructions" />
+                        android:ems="20"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
 
                     <Spinner
+                        android:id="@+id/spinnerFunction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-
+                    android:id="@+id/btn_Calcular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/layoutFunctions"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="16dp" />
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/backgroundFab"
+                    android:text="Calcular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
 
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_Calcular"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/backgroundCard"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="12dp"
+                    app:layout_constraintHorizontal_bias="0.5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/tvResultTittle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/result"
+                            android:textColor="@color/background"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvResultTittle"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sinTextResult"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvResultSen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    tools:text="" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cosTextResult"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvResultCos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"
+                                    tools:text="" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/tanTextResult"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tvResultTan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"
+                                    tools:text="" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/viewArea"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="26dp"
-            app:cardBackgroundColor="@color/backgroundCard"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewFunction"
-            app:layout_goneMarginBottom="30dp">
-
-
 
         </androidx.cardview.widget.CardView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
