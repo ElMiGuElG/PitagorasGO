@@ -7,8 +7,6 @@
     android:background="@color/backgroundApp"
     tools:context=".MainMenuActivity">
 
-    <!-- Views of the Trigonoimetric Functions -->
-
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -20,10 +18,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/viewFunction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewFunction" />
+
+    <!-- Views of the Trigonoimetric Functions -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/viewFunction"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="170dp"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         app:cardBackgroundColor="@color/backgroundCard"
@@ -35,34 +67,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/img_Function"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/img_function" />
 
             <TextView
-                android:id="@+id/tvHeight"
+                android:id="@+id/tvFunctionTittle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/img_Function"
+                android:layout_toRightOf="@+id/img_Function"
                 android:text="@string/functions"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageView
+            <TextView
+                android:id="@+id/tvFunction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/img_function" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_below="@+id/tvFunctionTittle"
+                android:layout_toEndOf="@+id/img_Function"
+                android:layout_toRightOf="@+id/img_Function"
+                android:text="@string/functionText"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
     <!-- Views of the Area -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/viewArea"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="137dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="26dp"
@@ -74,32 +127,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewFunction">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/img_Area"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/img_area" />
 
             <TextView
-                android:id="@+id/tvHe"
+                android:id="@+id/tvAreaTittle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/img_Area"
+                android:layout_toRightOf="@+id/img_Area"
                 android:text="@string/area"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageView
+            <TextView
+                android:id="@+id/tvArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/img_area" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_below="@+id/tvAreaTittle"
+                android:layout_toEndOf="@+id/img_Area"
+                android:layout_toRightOf="@+id/img_Area"
+                android:text="@string/areaText"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
 
     </androidx.cardview.widget.CardView>
@@ -134,72 +199,48 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/img_perimeter" />
+                android:src="@drawable/img_perimeterf" />
 
             <TextView
                 android:id="@+id/tvPerimeterTittle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/img_Perimeter"
+                android:layout_toRightOf="@+id/img_Perimeter"
                 android:text="@string/perimeter"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:layout_toEndOf="@+id/img_Perimeter"
-                android:layout_toRightOf="@+id/img_Perimeter"
-                android:layout_alignParentTop="true"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tvPerimeter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/perimeter"
-                android:textColor="@color/black"
+                android:layout_below="@+id/tvPerimeterTittle"
                 android:layout_toEndOf="@+id/img_Perimeter"
                 android:layout_toRightOf="@+id/img_Perimeter"
-                android:layout_below="@+id/tvPerimeterTittle"
-                android:textStyle="bold" />
+                android:text="@string/perimeterText"
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/textLive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/text"
-        android:textColor="@color/white"
+        android:text="@string/motivationText"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/viewFunction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/viewFunction" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPerimeter" />
 
-
-    <!--
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_logo" />
-    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
