@@ -48,7 +48,7 @@ public class AreaActivity extends AppCompatActivity {
             double area = Math.PI * Math.pow(radius, 2);;
             DecimalFormat decimalFormat = new DecimalFormat("#.##");
             String formattedResult = decimalFormat.format(area);
-            tvResult.setText(String.valueOf(formattedResult));
+            tvResult.setText(String.valueOf(formattedResult + " m^2"));
         } else {
             tvResult.setText("Error");
         }

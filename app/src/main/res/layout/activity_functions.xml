@@ -117,16 +117,17 @@
 
                     <EditText
                         android:id="@+id/editNumber"
-                        android:layout_width="150dp"
+                        android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:ems="20"
                         android:gravity="center"
                         android:inputType="numberDecimal"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="15dp" />
+                        android:textSize="15sp" />
 
                     <Spinner
+                        android:layout_marginTop="4dp"
                         android:id="@+id/spinnerFunction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -140,7 +141,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@color/backgroundFab"
+                    android:background="@color/background"
                     android:text="Calcular"
                     android:textColor="@color/white"
                     android:textStyle="bold"

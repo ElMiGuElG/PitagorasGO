@@ -41,7 +41,7 @@ public class FunctionsActivity extends AppCompatActivity {
     }
 
     private void initSpinner() {
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, R.layout.spinner_item);
         spinnerFunction.setAdapter(adapter);
     }
 
